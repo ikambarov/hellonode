@@ -12,6 +12,9 @@ node ('linux') {
          * docker build on the command line */
 
         app = docker.build("ikambarov/hellonode")
+
+        /* For more info, check https://jenkins.io/doc/book/pipeline/docker/
+         * docker.build("ikambarov/hellonode:${env.BUILD_ID}") */
     }
 
     stage('Test image') {
